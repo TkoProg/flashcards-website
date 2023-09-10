@@ -1,0 +1,129 @@
+.quiz-area {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #17252A;
+    border-radius: 75px;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    background-color: #3AAFA9;
+}
+
+.flashcards {
+    flex-direction: column;
+    border: 2px solid #17252A;
+    border-radius: 25px;
+    background-color: #2B7A78;
+    margin: 20px;
+}
+
+.flashcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FEFFFF;
+    border-radius: 25px;
+    background-color: #17252A;
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 22px; /* The margin is 22px here because of the missing border */
+    border-radius: 25px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+}
+
+/* .card {
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+} */
+
+.front,
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.front {
+    border: 2px solid #FEFFFF;
+    border-radius: 25px;
+    background-color: #17252A;
+    z-index: 3;
+    backface-visibility: hidden;
+}
+
+.back {
+    border: 2px solid #17252A;
+    border-radius: 25px;
+    background-color: #FEFFFF;
+    z-index: 2;
+    transform: rotateY(180deg);
+}
+
+.card-container:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card-container {
+    perspective: 1000px;
+}
+
+.row1,
+.row2,
+.row3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.sentence {
+    margin-left: 17px;
+}
+
+.english-sentence {
+    margin-left: 12px;
+}
+
+body {
+    background-color: #FEFFFF;
+}
+
+h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 40px;
+    color: #FEFFFF;
+    margin-bottom: 10px;
+}
+
+.front p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 29px;
+    color: #FEFFFF;
+}
+
+.back p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 29px;
+    color: #17252A;
+}
